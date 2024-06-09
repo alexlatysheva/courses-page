@@ -1,0 +1,10 @@
+<div class="flex flex-column align-items-center mb-6">
+    <div class="justify-content-between align-items-center flex-wrap w-full">
+      <app-course-item *ngFor="let course of courses" [course]="course" 
+            (edit)="editCourse($event)" (delete)="deleteCourse($event)">
+      </app-course-item>
+    </div>
+    <button pButton class="py-2 px-6 p-button-secondary p-button-outlined text-xl" 
+            label="Загрузить ещё" (click)="loadMore()">
+    </button>
+</div>
